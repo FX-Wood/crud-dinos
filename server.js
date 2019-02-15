@@ -36,7 +36,7 @@ app.post('/dinosaurs', function(req, res) {
 app.get('/dinosaurs/:id', function(req, res) {
     const dinos = JSON.parse(fs.readFileSync('static/lib/dinos.json'));
     if (typeof dinos[req.params.id] !== 'undefined') {
-        res.render('dinos/show', {myDino: dinos[req.params.id]})
+        res.render('dinos/show', {dinoNum: req.params.id, myDino: dinos[req.params.id]})
     } else {
         res.render('dinos/show', {myDino: {name:'undefined', type: 'undefined'}})
     }
