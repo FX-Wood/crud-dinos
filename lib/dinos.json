@@ -5,8 +5,12 @@
 
     },
     {
+        "name": "Cera",
+        "type": "triceratops"
+    },
+    {
         "name": "Ducky",
-        "type": ""
+        "type": "saurolophus"
     },
     {
         "name": "Petrie",
