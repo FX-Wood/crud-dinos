@@ -1,0 +1,10 @@
+<% include ../partials/header.ejs %>
+
+<ul>
+    <% myDinos.forEach(function(dino) { %>
+    <li>Dino name: <%= dino.name %> Dino type: <%= dino.type %></li>
+    <% }); %>
+</ul>
+
+
+<% include ../partials/footer/footer.ejs
