@@ -1,8 +1,19 @@
 <% include ../partials/header.ejs %>
 
 <ul>
-    <% myDinos.forEach(function(dino) { %>
-    <li>Dino name: <%= dino.name %> Dino type: <%= dino.type %></li>
+    <% myDinos.forEach(function(dino, i) { %>
+    <li> <% i %> Dino name: <%= dino.name %> Dino type: <%= dino.type %>
+        
+        <form action="dinosaurs/<%= i %>/edit" >
+            <input type="submit" value="Edit" />
+        </form>
+
+        <form method="POST" action="dinosaurs/<%= i %>/?_method=DELETE">
+            
+            <input type="submit" value="Delete" />
+        </form>
+    </li>
+
     <% }); %>
 </ul>
 

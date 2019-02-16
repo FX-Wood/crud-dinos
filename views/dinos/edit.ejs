@@ -1,0 +1,14 @@
+<% include ../partials/header.ejs %>
+
+<p>Dino number: <%= dinoNum %> </p>
+<p>Dino name: <%= myDino.name %></p>
+<p> Dino type: <%= myDino.type %></p>
+
+<form action="POST" action="dinosaurs/<%= dinoNum %>/?_method=PUT">
+    <input type="text" name="name" value="<%= myDino.name %>"> <br>
+    <input type="text" name="type" value="<%= myDino.type %>"> <br>
+    <input type="submit" name="">
+</form>
+
+
+<% include ../partials/footer.ejs %>
